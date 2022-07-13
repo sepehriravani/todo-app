@@ -1,13 +1,60 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto", sans-serif;
+
+  color: #fff;
+  line-height: 1.6;
+}
+.myday {
+  min-height: 100vh;
+  background: linear-gradient(to right, #9400d37a, #4c0082cc);
+}
+.upcoming {
+  min-height: 100vh;
+  background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+}
+.filter {
+  min-height: 100vh;
+  background: linear-gradient(to right, #e65c00, #f9d423);
+}
+.archive {
+  min-height: 100vh;
+  background: linear-gradient(to right, #c84e89, #f15f79);
+}
+.menu {
+  width: 22rem;
+  background: linear-gradient(to right, #70e3ff, #ffff);
+  opacity: 0.5;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 10%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.menu-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 12rem;
+  width: 100%;
+  margin-left: 2rem;
+}
+.menu-item a {
+  text-decoration: none;
+}
+.nav-text {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+span {
+  margin-left: 2rem;
 }
