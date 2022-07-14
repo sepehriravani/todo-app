@@ -6,30 +6,40 @@
 
 body {
   font-family: "Roboto", sans-serif;
-
   color: #fff;
   line-height: 1.6;
 }
 .myday {
   min-height: 100vh;
-  background: linear-gradient(to right, #9400d37a, #4c0082cc);
+  background: linear-gradient(
+    to right,
+    rgba(148, 0, 211, 0.48),
+    rgba(76, 0, 130, 0.8)
+  );
 }
-.upcoming {
+.planned {
   min-height: 100vh;
   background: linear-gradient(to right, #4cb8c4, #3cd3ad);
 }
 .filter {
   min-height: 100vh;
-  background: linear-gradient(to right, #e65c00, #f9d423);
+  background: linear-gradient(to right, #e65c00c6, #f9d523c0);
 }
 .archive {
   min-height: 100vh;
   background: linear-gradient(to right, #c84e89, #f15f79);
 }
 .menu {
+  position: relative;
+
   width: 22rem;
-  background: linear-gradient(to right, #70e3ff, #ffff);
-  opacity: 0.5;
+  background: linear-gradient(
+      to right,
+      rgba(112, 227, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  /* opacity: 0.5; */
   border-top-right-radius: 5%;
   border-bottom-right-radius: 10%;
   height: 100vh;
@@ -39,10 +49,12 @@ body {
 .menu-item {
   display: flex;
   justify-content: center;
+  /* align-items: baseline; */
+
   flex-direction: column;
-  margin-bottom: 12rem;
+  margin-bottom: 13rem;
   width: 100%;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
 }
 .menu-item a {
   text-decoration: none;
@@ -52,9 +64,90 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 1rem;
+
+  padding: 0.8rem;
   font-size: 1.4rem;
+  transition: all 0.3s ease-out;
+}
+.list-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  /* border-radius: 80%; */
+}
+
+.navtext {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
 }
 span {
   margin-left: 2rem;
+  color: rgba(0, 0, 0, 1);
+  /* color: #000000; */
+}
+.menu-item li {
+  cursor: pointer;
+  margin-left: 3rem;
+}
+
+.myday-text {
+  color: #9400d3;
+}
+.planned-text {
+  color: #1a7287;
+}
+.filter-text {
+  color: #cf5300;
+}
+.archive-text {
+  color: #c84e89;
+}
+.menu-item svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.user-pic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.2rem;
+}
+.user {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: fixed;
+  height: 10vh;
+  top: 6%;
+  left: 3%;
+}
+.userStats {
+  font-family: sans-serif;
+}
+.userStats h3 {
+  color: black;
+  font-weight: normal;
+  font-size: 18px;
+}
+.userStats p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.add-task {
+  position: fixed;
+  bottom: 8%;
+  right: 3%;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1.3rem;
+  /* blur(8px); */
+  background: linear-gradient(to right, #62626276, #64646457);
+}
+.add-task svg {
+  font-size: 2.7rem;
+  color: white;
+}
+.add-task p {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
 }
