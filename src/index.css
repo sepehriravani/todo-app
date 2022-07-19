@@ -12,7 +12,7 @@ body {
 .myday {
   min-height: 100vh;
   background: linear-gradient(
-    to right,
+    to left,
     rgba(148, 0, 211, 0.48),
     rgba(76, 0, 130, 0.8)
   );
@@ -67,8 +67,11 @@ body {
 
   padding: 0.8rem;
   font-size: 1.4rem;
+}
+.list-item {
   transition: all 0.3s ease-out;
 }
+
 .list-item:hover {
   background: rgba(255, 255, 255, 0.2);
   /* border-radius: 80%; */
@@ -138,10 +141,13 @@ span {
   bottom: 8%;
   right: 3%;
   display: flex;
+
   align-items: center;
+  justify-content: center;
   padding: 0.7rem 1.3rem;
   /* blur(8px); */
   background: linear-gradient(to right, #62626276, #64646457);
+  border-radius: 2%;
 }
 .add-task svg {
   font-size: 2.7rem;
@@ -150,4 +156,88 @@ span {
 .add-task p {
   font-size: 1.2rem;
   margin-left: 0.5rem;
+}
+.expand {
+  width: 4rem;
+}
+.task-input {
+  padding: 1rem;
+
+  border-radius: 5%;
+  position: absolute;
+  /* width: 25%; */
+  margin: auto;
+
+  background-color: rgba(250, 183, 0, 01);
+  /* background: linear-gradient(to right, rgba(250, 183, 0, 01), #fffb00); */
+  background-color: #f4d03f;
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+
+  color: #212121;
+  box-shadow: 0.5rem 0.5rem 0 #212121;
+
+  bottom: 5rem;
+  right: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.task-input input {
+  margin-left: 1rem;
+  border: none;
+  border: 3px solid #212121;
+  margin-top: 1rem;
+
+  padding: 0.5rem 2rem;
+}
+.button-group button {
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 9%;
+  border: none;
+}
+.task-input {
+  margin-bottom: 15rem;
+}
+.myday,
+.filter,
+.archive,
+.planned {
+  display: flex;
+}
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  /* padding: 40px 50px; */
+  padding: 1rem 3rem;
+  margin: 20px 0;
+  margin-left: 2rem;
+  position: relative;
+  width: 100vh;
+  display: flex;
+  justify-content: space-between;
+  /* height: 3rem; */
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.stat {
+  display: flex;
+}
+.customize {
+  display: flex;
+  justify-content: end;
+}
+.edit {
+  background-color: white;
+  border: none;
+}
+.check {
+  height: 1.3rem;
+
+  width: 1.3rem;
+  /* border-radius: 50%; */
 }

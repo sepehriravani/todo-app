@@ -1,9 +1,11 @@
 import { menuData, userData } from "./menuData";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import AddTask from "./AddTask";
 function Menu() {
   return (
     <nav className={`menu`}>
+      {/* <AddTask /> */}
       <div className="user">
         <div className="user-pic">
           <img src={userData.icon} alt={userData.name.substring(0, 2)}></img>
