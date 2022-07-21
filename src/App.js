@@ -5,6 +5,8 @@ import Filter from "./pages/Filter";
 import Archive from "./pages/Archive";
 import AddTask from "./components/AddTask";
 import EditStats from "./components/EditStats";
+import About from "./pages/About";
+import AboutLinkIcon from "./components/AboutLinkIcon";
 import { TodoProvider } from "./Context/TodoContext";
 import {
   Route,
@@ -14,16 +16,20 @@ import {
 } from "react-router-dom";
 function App() {
   return (
-    <TodoProvider>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<MyDay />} />
-          <Route path="/planned" element={<Planned />} />
-          <Route path="/filter" element={<Filter />} />
-          <Route path="/archive" element={<Archive />} />
-        </Routes>
-      </Router>
-    </TodoProvider>
+    <>
+      <TodoProvider>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<MyDay />} />
+            <Route path="/planned" element={<Planned />} />
+            <Route path="/filter" element={<Filter />} />
+            <Route path="/archive" element={<Archive />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+          <AboutLinkIcon />
+        </Router>
+      </TodoProvider>
+    </>
   );
 }
 

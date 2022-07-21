@@ -279,6 +279,11 @@ select {
 option {
   background-color: #320a28;
 }
+.about-link {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+}
 .edit {
   background-color: rgba(0, 0, 0, 0);
   padding-left: 2rem;
@@ -328,6 +333,21 @@ option {
   background-color: rgb(255, 255, 255, 0.2);
 
   cursor: pointer;
+}
+.filter h2 {
+  margin: 2rem 0.5rem;
+}
+.about {
+  background: #4f10ad;
+  padding: 5rem;
+  min-height: 100vh;
+}
+.about p {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.about a {
+  color: rgb(254, 0, 0);
 }
 @media (max-width: 500px) {
   .menu {
