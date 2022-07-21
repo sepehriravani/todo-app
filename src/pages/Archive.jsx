@@ -14,7 +14,7 @@ function Archive() {
         <div className="archive">
           <Menu />
           <AddTask />
-          <p>No todo yet!</p>;
+          <h2 style={{ margin: "2rem" }}>No todo yet!</h2>
         </div>
       </>
     );

@@ -1,10 +1,10 @@
 import Card from "./shared/Card";
 import { FaTimes, FaEdit } from "react-icons/fa";
-import AddTask from "./AddTask";
+
 import TodoContext from "../Context/TodoContext";
 import { useContext } from "react";
 function TodoItem({ item }) {
-  const { deleteTask, editTask, checkBox } = useContext(TodoContext);
+  const { deleteTask, checkBox } = useContext(TodoContext);
 
   return (
     <Card>
@@ -24,10 +24,9 @@ function TodoItem({ item }) {
       </div>
       <div className="customize">
         <button className="edit">
-          <FaEdit
+          <FaTimes
             onClick={() => {
-              <AddTask />;
-              editTask(item);
+              deleteTask(item.id);
             }}
             color="purple"
           />

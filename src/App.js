@@ -4,6 +4,7 @@ import Planned from "./pages/Planned";
 import Filter from "./pages/Filter";
 import Archive from "./pages/Archive";
 import AddTask from "./components/AddTask";
+import EditStats from "./components/EditStats";
 import { TodoProvider } from "./Context/TodoContext";
 import {
   Route,

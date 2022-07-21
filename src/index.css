@@ -5,9 +5,11 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  position: relative;
   color: #fff;
   line-height: 1.6;
+  font-family: "Poppins", sans-serif;
 }
 .myday {
   min-height: 100vh;
@@ -23,7 +25,7 @@ body {
 }
 .filter {
   min-height: 100vh;
-  background: linear-gradient(to right, #e65c00c6, #f9d523c0);
+  background: linear-gradient(35deg, red, purple);
 }
 .archive {
   min-height: 100vh;
@@ -201,6 +203,7 @@ span {
 }
 .task-input {
   margin-bottom: 15rem;
+  z-index: 5;
 }
 .myday,
 .filter,
@@ -209,12 +212,13 @@ span {
   display: flex;
 }
 .card {
+  /* margin-top: 1rem; */
   background-color: #fff;
   color: #333;
   border-radius: 8px;
   /* padding: 40px 50px; */
   padding: 1rem 3rem;
-  margin: 20px 0;
+  margin: 2rem 0;
   margin-left: 2rem;
   position: relative;
   width: 100vh;
@@ -240,4 +244,192 @@ span {
 
   width: 1.3rem;
   /* border-radius: 50%; */
+}
+.select {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+select {
+  border: none;
+  appearance: none;
+  margin-top: 0.5rem;
+
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  padding: 0.5rem 3rem;
+  width: 15rem;
+
+  /* Remove IE arrow */
+
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.3) 3em,
+      rgba(255, 255, 255, 0.2)
+    );
+}
+option {
+  background-color: #320a28;
+}
+.edit {
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 2rem;
+  font-size: 1rem;
+}
+.containers {
+  position: absolute;
+  left: 10%;
+  top: 70%;
+}
+.user-inp {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgba(32, 33, 66, 0.5);
+  padding: 6rem 2rem;
+  border-radius: 10%;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+}
+.user-inp input {
+  margin-bottom: 0.5rem;
+  /* flex-grow: 2; */
+  /* border: none; */
+
+  font-size: 16px;
+  margin-left: 1rem;
+
+  background-color: white;
+  padding: 0.5rem 1rem;
+
+  border: none;
+}
+
+.user-inp input:focus {
+  outline: none;
+}
+.containers button {
+  border: 0;
+
+  border-radius: 8px;
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 1rem;
+  width: 50%;
+  height: 2rem;
+  background-color: rgb(255, 255, 255, 0.2);
+
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .menu {
+    width: 8rem;
+  }
+
+  .nav-text {
+    font-size: 0.6rem;
+  }
+  .menu-item li {
+    margin-left: 0;
+    /* padding: 1rem; */
+  }
+  .menu-item svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  span {
+    margin: 0;
+  }
+  .user-pic img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0;
+  }
+  .userStats h3 {
+    font-size: 0.7rem;
+  }
+  .userStats p {
+    font-size: 0.4rem;
+  }
+  .user {
+    left: 1%;
+    top: 8%;
+    align-items: center;
+    justify-content: center;
+  }
+  .userStats {
+    margin-left: 0.2rem;
+  }
+  .edit {
+    padding-left: 0;
+    font-size: 0.6rem;
+  }
+  .card {
+    width: 100%;
+    padding: 0.4rem 1rem;
+    margin-left: 0.6rem;
+  }
+  .check {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.3rem;
+  }
+  .stat {
+    align-items: center;
+    justify-content: center;
+  }
+  .select {
+    right: -5%;
+  }
+  select {
+    appearance: none;
+    width: 100%;
+
+    padding: 0.1rem 0.1rem;
+    font-size: 0.5rem;
+    height: 1.5rem;
+    z-index: 5;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.3) 3em,
+      rgba(255, 255, 255, 0.2)
+    );
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 0.8rem;
+
+    margin-left: 0.2rem;
+  }
+  .task-input {
+    right: 1rem;
+    padding: 1;
+  }
+  .task-input input {
+    padding: 0.2rem 0.5rem;
+  }
+  .add-task {
+    padding: 0.5rem 1rem;
+  }
+  .add-task p {
+    font-size: 0.8rem;
+  }
+  .add-task svg {
+    font-size: 2rem;
+  }
+  .filter .card {
+    margin: 1rem 0.25rem;
+  }
+  .todo-list {
+    margin-top: 1rem;
+  }
 }
