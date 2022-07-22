@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+*******
+Main Script:
+You can run both mock backend and frontend with :
+### `npm run dev`
+*******
+
 In the project directory, you can run:
 
 ### `npm start`
