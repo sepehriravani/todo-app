@@ -9,7 +9,6 @@ function AddTask() {
   const { addTask } = useContext(TodoContext);
   const [isOpen, setIsOpen] = useState(false);
   const [todo, setTodo] = useState({});
-  // console.log(new Date().toLocaleDateString());
 
   return (
     <>

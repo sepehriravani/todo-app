@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function TodoList() {
-  const { todo, isLoading, uncheckedTodo, myDay } = useContext(TodoContext);
+  const { todo, isLoading, myDay } = useContext(TodoContext);
 
   if (!isLoading && (todo.length === 0 || !todo)) {
     return <h2 style={{ margin: "2rem" }}>No todo yet!</h2>;

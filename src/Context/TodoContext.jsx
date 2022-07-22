@@ -12,7 +12,7 @@ export const TodoProvider = ({ children }) => {
   const [planned, setPlanned] = useState([]);
   const [label, setLabel] = useState([]);
   const [currentOption, setCurrentOption] = useState("active");
-  const [currentValue, setCurrentValue] = useState("");
+
   const [labelTodo, setLabelTodo] = useState([]);
   const date = new Date().toLocaleDateString("en-CA");
   const [username, setUsername] = useState(userData.name);

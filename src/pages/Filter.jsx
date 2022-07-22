@@ -4,7 +4,7 @@ import { useContext } from "react";
 import TodoContext from "../Context/TodoContext";
 import TodoItem from "../components/TodoItem";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+
 function Filter() {
   const { isLoading, label, labelTodo, labelFilter } = useContext(TodoContext);
   let unique = [...new Set(label)];
