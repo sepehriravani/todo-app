@@ -21,10 +21,20 @@ function AddTask() {
         <Fade big>
           <div className="task-input">
             <div className="task-name">
-              <input className="input_task" type="text" placeholder="task" />
+              <input
+                className="input_task"
+                type="text"
+                placeholder="task"
+                required
+              />
             </div>
             <div className="label-name">
-              <input className="input_label" type="text" placeholder="label" />
+              <input
+                className="input_label"
+                type="text"
+                placeholder="label"
+                required
+              />
             </div>
             <div className="task-date">
               <input

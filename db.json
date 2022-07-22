@@ -4,15 +4,8 @@
       "task": "wash the car",
       "label": "car",
       "date": "2022-07-22",
-      "archive": false,
+      "archive": true,
       "id": 1
-    },
-    {
-      "task": "wash the dishes",
-      "label": "homework",
-      "date": "2022-07-22",
-      "archive": false,
-      "id": 2
     },
     {
       "task": "run bussines",
