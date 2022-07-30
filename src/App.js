@@ -25,6 +25,7 @@ function App() {
             <Route path="/filter" element={<Filter />} />
             <Route path="/archive" element={<Archive />} />
             <Route path="/about" element={<About />} />
+            <Route path="/*" element={<MyDay />} />
           </Routes>
           <AboutLinkIcon />
         </Router>
