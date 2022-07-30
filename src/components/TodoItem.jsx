@@ -10,14 +10,15 @@ function TodoItem({ item }) {
     <Card>
       <div className="stat">
         <div className="checkbox">
-          <label class="container">
+          <label className="container">
             <input
               type="checkbox"
               className={`check inp-${item.id}`}
               onClick={() => checkBox(item.id)}
-              checked={item.archive && "checked"}
+              defaultChecked={item.archive && "checked"}
+              // checked={item.archive && "checked"}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
         </div>
         <div className="text-display">{item.task}</div>

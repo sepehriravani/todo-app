@@ -21,11 +21,13 @@ function Filter() {
             className="filter-list label-fil"
             onChange={() => labelFilter()}
           >
-            <option value="none" selected disabled hidden>
+            <option key="none" value="none" disabled hidden>
               Select an Option
             </option>
             {unique.map((item) => (
-              <option value={item}>{item}</option>
+              <option key={item.id} value={item}>
+                {item}
+              </option>
             ))}
           </select>
           <select
@@ -33,8 +35,12 @@ function Filter() {
             className="filter-list current-fil"
             onChange={() => labelFilter()}
           >
-            <option value="active">Unfinished</option>
-            <option value="non-active">Finished</option>
+            <option key="active" value="active">
+              Unfinished
+            </option>
+            <option key="non-active" value="non-active">
+              Finished
+            </option>
           </select>
         </div>
       </div>
@@ -49,14 +55,16 @@ function Filter() {
         <div className="select">
           <select
             name="todos"
-            class="filter-list label-fil"
+            className="filter-list label-fil"
             onChange={() => labelFilter()}
           >
-            <option value="none" selected disabled hidden>
+            <option key="selectop" value="none" disabled hidden>
               Select an Option
             </option>
             {unique.map((item) => (
-              <option value={item}>{item}</option>
+              <option key={item.id} value={item}>
+                {item}
+              </option>
             ))}
           </select>
           <select
@@ -64,8 +72,12 @@ function Filter() {
             className="filter-list current-fil"
             onChange={() => labelFilter()}
           >
-            <option value="active">Unfinished</option>
-            <option value="non-active">Finished</option>
+            <option key="active" value="active">
+              Unfinished
+            </option>
+            <option key="non-active" value="non-active">
+              Finished
+            </option>
           </select>
         </div>
         <div className="todo-list">

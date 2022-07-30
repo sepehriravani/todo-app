@@ -21,6 +21,7 @@ function AddTask() {
           <div className="task-input">
             <div className="task-name">
               <input
+                key="1"
                 className="input_task"
                 type="text"
                 placeholder="task"
@@ -29,6 +30,7 @@ function AddTask() {
             </div>
             <div className="label-name">
               <input
+                key="2"
                 className="input_label"
                 type="text"
                 placeholder="label"
@@ -37,6 +39,7 @@ function AddTask() {
             </div>
             <div className="task-date">
               <input
+                key="3"
                 type="date"
                 className="input_date"
                 defaultValue={new Date().toLocaleDateString("en-CA")}

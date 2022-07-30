@@ -61,6 +61,7 @@ export const TodoProvider = ({ children }) => {
     const data = await response.json();
 
     const val = document.querySelector(".label-fil").value;
+    console.log("val is: " + val);
     const op = document.querySelector(".current-fil").value;
 
     let bull = true;
@@ -88,6 +89,7 @@ export const TodoProvider = ({ children }) => {
       body: JSON.stringify(newTodo),
     });
     const data = await response.json();
+    setTodo([...todo, data]);
     setUncheckedTodo([...uncheckedTodo, data]);
     if (data.date !== date) {
       console.log("hi");
@@ -122,7 +124,9 @@ export const TodoProvider = ({ children }) => {
     });
     const data = response.json();
     setUncheckedTodo(todo.map((item) => item.archive === false && { ...item }));
-    labelFilter();
+    if (window.location.href === "http://localhost:3000/filter") {
+      labelFilter();
+    }
   };
 
   const deleteTask = async (id) => {
