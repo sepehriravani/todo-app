@@ -61,7 +61,7 @@ export const TodoProvider = ({ children }) => {
     const data = await response.json();
 
     const val = document.querySelector(".label-fil").value;
-    console.log("val is: " + val);
+
     const op = document.querySelector(".current-fil").value;
 
     let bull = true;
@@ -137,7 +137,9 @@ export const TodoProvider = ({ children }) => {
       setTodo(todo.map((item) => item.id !== id));
     }
     fetchTodo();
-    labelFilter();
+    if (window.location.href === "http://localhost:3000/filter") {
+      labelFilter();
+    }
   };
 
   return (

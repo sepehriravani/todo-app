@@ -22,7 +22,7 @@ function Menu() {
         <ul className="menu-item">
           {menuData.map((item, index) => {
             return (
-              <div className="list-item">
+              <div key={index} className="list-item">
                 <Link to={item.path} className="menu-link">
                   <li key={index} className={item.cName}>
                     {item.icon}

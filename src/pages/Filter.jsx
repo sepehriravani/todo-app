@@ -21,11 +21,11 @@ function Filter() {
             className="filter-list label-fil"
             onChange={() => labelFilter()}
           >
-            <option key="none" value="none" disabled hidden>
+            <option value="none" disabled hidden>
               Select an Option
             </option>
-            {unique.map((item) => (
-              <option key={item.id} value={item}>
+            {unique.map((item, index) => (
+              <option key={index} value={item}>
                 {item}
               </option>
             ))}
@@ -35,12 +35,8 @@ function Filter() {
             className="filter-list current-fil"
             onChange={() => labelFilter()}
           >
-            <option key="active" value="active">
-              Unfinished
-            </option>
-            <option key="non-active" value="non-active">
-              Finished
-            </option>
+            <option value="active">Unfinished</option>
+            <option value="non-active">Finished</option>
           </select>
         </div>
       </div>
@@ -58,11 +54,11 @@ function Filter() {
             className="filter-list label-fil"
             onChange={() => labelFilter()}
           >
-            <option key="selectop" value="none" disabled hidden>
+            <option value="none" disabled hidden>
               Select an Option
             </option>
-            {unique.map((item) => (
-              <option key={item.id} value={item}>
+            {unique.map((item, index) => (
+              <option key={index} value={item}>
                 {item}
               </option>
             ))}
@@ -72,26 +68,22 @@ function Filter() {
             className="filter-list current-fil"
             onChange={() => labelFilter()}
           >
-            <option key="active" value="active">
-              Unfinished
-            </option>
-            <option key="non-active" value="non-active">
-              Finished
-            </option>
+            <option value="active">Unfinished</option>
+            <option value="non-active">Finished</option>
           </select>
         </div>
         <div className="todo-list">
           <AnimatePresence>
             {labelTodo.map(
-              (item) =>
+              (item, index) =>
                 typeof item === "object" && (
                   <motion.div
-                    key={item.id}
+                    key={index}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
-                    <TodoItem key={item.id} item={item} />
+                    <TodoItem key={index} item={item} />
                   </motion.div>
                 )
             )}
